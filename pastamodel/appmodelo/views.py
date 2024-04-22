@@ -178,11 +178,11 @@ def deletar_livro(request, pk):
 
 # Views para o modelo Exemplar
 def lista_exemplares(request):
-    exemplares = Exemplar.objects.all()
+    exemplares = exemplar.objects.all()
     return render(request, 'lista_exemplares.html', {'exemplares': exemplares})
 
 def detalhes_exemplar(request, pk):
-    exemplar = get_object_or_404(Exemplar, pk=pk)
+    exemplar = get_object_or_404(exemplar, pk=pk)
     return render(request, 'detalhes_exemplar.html', {'exemplar': exemplar})
 
 def novo_exemplar(request):
