@@ -12,6 +12,7 @@
         </tr>
     </thead>
     <tbody>
+        exemplares = Exemplar.objects.all()
         {% for exemplar in exemplares %}
         <tr>
             <td>{{ exemplar.id }}</td>
